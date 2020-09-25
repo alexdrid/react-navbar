@@ -6,14 +6,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  position: relative;
 }
 
 .navbar-logo {
   width: 120px;
   font-size: 22px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo-icon {
@@ -22,6 +21,7 @@
 
 .menu-container {
   display: flex;
+  background-color: #242424;
 }
 
 .menu-icon {
@@ -33,7 +33,7 @@
 
 .menu-item {
   width: 100px;
-  color: white;
+
   width: 80px;
   font-size: 16px;
   text-decoration: none;
@@ -45,6 +45,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
 .menu-icon:hover {
@@ -65,7 +67,30 @@
     display: block;
   }
 
-  .menu-item {
-    display: none;
+  .menu-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    filter: brightness(1.4);
+    transition: 0.2s ease-in-out;
+  }
+
+  .active {
+    left: 0;
+  }
+
+  .menu-item,
+  .menu-item:hover {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    font-size: 24px;
   }
 }

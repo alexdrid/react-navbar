@@ -1,16 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaCode, FaBars } from "react-icons/fa";
+import { MdNavigation } from "react-icons/md";
 import "./Navbar.css";
-
-const navMenuItems = ["Home", "About", "Services"];
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
-      Navbar
+      <div className="navbar-logo">
+        <MdNavigation className="logo-icon" />
+        Navbar
+      </div>
+
       <div className="menu-container">
-        {navMenuItems.map((item) => (
-          <li className="menu-item">{item}</li>
-        ))}
+        <div className="menu-icon">
+          <FaBars />
+        </div>
+        <Link to="/home" className="menu-item">
+          Home
+        </Link>
+        <Link to="/about" className="menu-item">
+          About
+        </Link>
+        <Link to="/services" className="menu-item">
+          Services
+        </Link>
       </div>
     </nav>
   );
